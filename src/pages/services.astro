@@ -3,7 +3,6 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import MainSection from "@components/ui/blocks/MainSection.astro";
 import ServiceCard from "@components/ui/cards/ServiceCard.astro";
-import ServiceModal from "@components/ui/modals/ServiceModal.astro";
 
 // Import necessary images
 import businessAnalytics from "@images/dashboard-image.jpg";
@@ -251,7 +250,7 @@ const services = [
     }
   },
   {
-    id: "social-media",
+    id: "social-media-marketing",
     title: "Social Media Marketing",
     description: "Social media isn't just about posting content—it's about building connections, creating conversations, and driving real business results. We turn your social presence into a powerful marketing engine.",
     icon: "social",
@@ -507,7 +506,7 @@ const ogTitle = "Expert Business Consulting Services | Trade Guild Consulting";
           <ServiceCard
             title={service.title}
             description={service.description}
-            modalId={service.id}
+            serviceUrl={`/services/${service.id}`}
           />
         ))}
       </div>
@@ -547,116 +546,4 @@ const ogTitle = "Expert Business Consulting Services | Trade Guild Consulting";
   </section>
 
 
-  <!-- Service Modals -->
-  {services.map((service) => (
-    <ServiceModal
-      id={service.id}
-      title={service.modalContent.title}
-      subtitle={service.modalContent.subtitle}
-      content={service.modalContent.content}
-    />
-  ))}
-
-  <!-- Auto-open modal based on URL fragment -->
-  <script>
-    // Track if a modal has been successfully opened to prevent multiple attempts
-    let modalOpened = false;
-
-    // Function to attempt opening a modal with multiple fallback strategies
-    function openServiceModal(modalId: string): boolean {
-      if (modalOpened) return true; // Prevent multiple opens
-      
-      const modalElement = document.getElementById(modalId);
-      if (!modalElement) return false;
-
-      // Strategy 1: Use Preline's HSOverlay if available
-      if (typeof window !== 'undefined' && (window as any).HSStaticMethods && (window as any).HSStaticMethods.HSOverlay) {
-        try {
-          (window as any).HSStaticMethods.HSOverlay.open(modalElement);
-          modalOpened = true;
-          return true;
-        } catch (e) {
-          // Continue to next strategy
-        }
-      }
-
-      // Strategy 2: Try using HSOverlay directly if available
-      if (typeof window !== 'undefined' && (window as any).HSOverlay) {
-        try {
-          (window as any).HSOverlay.open(modalElement);
-          modalOpened = true;
-          return true;
-        } catch (e) {
-          // Continue to next strategy
-        }
-      }
-
-      // Strategy 3: Find and click the trigger button
-      const triggerButton = document.querySelector(`[data-hs-overlay="#${modalId}"]`) as HTMLElement;
-      if (triggerButton && typeof triggerButton.click === 'function') {
-        try {
-          triggerButton.click();
-          modalOpened = true;
-          return true;
-        } catch (e) {
-          // Continue to next strategy
-        }
-      }
-
-      // Strategy 4: Manual DOM manipulation as final fallback
-      try {
-        modalElement.classList.remove('hidden');
-        modalElement.classList.add('hs-overlay-open');
-        modalElement.style.display = 'flex';
-        modalElement.setAttribute('aria-hidden', 'false');
-        
-        // Add backdrop click handler
-        modalElement.addEventListener('click', function(e: Event) {
-          if (e.target === modalElement) {
-            modalElement.classList.add('hidden');
-            modalElement.classList.remove('hs-overlay-open');
-            modalElement.style.display = 'none';
-            modalElement.setAttribute('aria-hidden', 'true');
-            modalOpened = false; // Reset flag when modal is closed
-          }
-        });
-        
-        modalOpened = true;
-        return true;
-      } catch (e) {
-        return false;
-      }
-    }
-
-    // Function to handle modal opening - only if there's a valid hash
-    function handleModalOpen(hash: string): void {
-      // Early return if no hash or modal already opened
-      if (!hash || hash.trim() === '' || modalOpened) return;
-      
-      const validServiceIds = ['business-consulting', 'digital-marketing', 'social-media', 'seo-services'];
-      
-      // Only proceed if hash is a valid service ID
-      if (!validServiceIds.includes(hash)) return;
-
-      // Single attempt with a reasonable delay for Preline to load
-      setTimeout(() => {
-        if (!modalOpened) {
-          openServiceModal(hash);
-        }
-      }, 300);
-    }
-
-    // Handle initial page load
-    document.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.substring(1);
-      handleModalOpen(hash);
-    });
-
-    // Handle hash changes for single-page navigation
-    window.addEventListener('hashchange', () => {
-      modalOpened = false; // Reset flag for new hash
-      const hash = window.location.hash.substring(1);
-      handleModalOpen(hash);
-    });
-  </script>
 </MainLayout>

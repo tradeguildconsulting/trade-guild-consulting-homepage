@@ -11,10 +11,10 @@ const footerLinks = [
   {
     section: "Services",
     links: [
-      { name: "Business Consulting", url: "/services#business-consulting" },
-      { name: "Digital Marketing", url: "/services#digital-marketing" },
-      { name: "Social Media Marketing", url: "/services#social-media" },
-      { name: "SEO Services", url: "/services#seo-services" },
+      { name: "Business Consulting", url: "/services/business-consulting" },
+      { name: "Digital Marketing", url: "/services/digital-marketing" },
+      { name: "Social Media Marketing", url: "/services/social-media-marketing" },
+      { name: "SEO Services", url: "/services/seo-services" },
     ],
   },
   {

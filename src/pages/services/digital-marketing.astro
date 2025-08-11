@@ -1,0 +1,342 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@/data_files/constants";
+
+const pageTitle: string = `Digital Marketing Services | ${SITE.title}`;
+const metaDescription = "Driving results in a digital world. Our data-driven digital marketing strategies help businesses grow online through SEO, PPC, social media, and content marketing.";
+const ogTitle = "Digital Marketing Services | Trade Guild Consulting";
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://tradeguildconsulting.com/services/digital-marketing",
+    url: "https://tradeguildconsulting.com/services/digital-marketing",
+    name: "Digital Marketing Services",
+    description: metaDescription,
+    provider: {
+      "@type": "Organization",
+      name: "Trade Guild Consulting",
+      url: "https://tradeguildconsulting.com"
+    },
+    serviceType: "Digital Marketing",
+    areaServed: "Worldwide"
+  }}
+>
+  <!-- Breadcrumb Navigation -->
+  <nav class="mx-auto max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2 text-sm text-gray-600 dark:text-neutral-400">
+      <li>
+        <a href="/" class="hover:text-[#FE9002] transition-colors">Home</a>
+      </li>
+      <li class="flex items-center">
+        <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        <a href="/services" class="hover:text-[#FE9002] transition-colors">Services</a>
+      </li>
+      <li class="flex items-center">
+        <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="text-gray-800 dark:text-neutral-200 font-medium">Digital Marketing</span>
+      </li>
+    </ol>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-orange-50/30 to-yellow-50/20 dark:from-neutral-900 dark:via-neutral-900/95 dark:to-neutral-800/90"></div>
+    
+    <!-- Decorative Elements -->
+    <div class="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-[#D89D40]/10 to-[#FE9002]/10 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-[#FE9002]/10 to-[#D89D40]/10 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+
+    <div class="relative z-10 mx-auto max-w-4xl text-center">
+      <!-- Icon -->
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#D89D40] to-[#FE9002] rounded-2xl mb-8 shadow-lg">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl font-bold text-neutral-800 dark:text-neutral-100 lg:text-6xl mb-6">
+        Driving Results in a Digital World.
+      </h1>
+      
+      <!-- Decorative Line -->
+      <div class="w-32 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-8 rounded-full"></div>
+      
+      <!-- Subheadline -->
+      <p class="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed mb-10">
+        The digital landscape is constantly evolving, and so are we. At Trade Guild Consulting, we don't just keep up with digital trends—we leverage them to drive real, measurable results for your business.
+      </p>
+
+      <!-- CTA Button -->
+      <a
+        href="/contact"
+        class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-r from-[#D89D40] to-[#FE9002] hover:from-[#c8863a] hover:to-[#e8820a] border border-transparent text-white text-lg font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FE9002] focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 py-4 px-8 shadow-lg hover:shadow-xl hover:shadow-[#D89D40]/25 dark:hover:shadow-[#FE9002]/25 hover:scale-105 dark:focus:ring-offset-gray-800"
+      >
+        Accelerate Your Digital Growth
+        <svg class="flex-shrink-0 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full">
+    <div class="mx-auto max-w-4xl">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-4">
+          Why Choose Trade Guild Consulting for Digital Marketing?
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-6 rounded-full"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="bg-gradient-to-br from-[#D89D40]/5 via-orange-50/50 to-[#FE9002]/5 dark:from-[#FE9002]/5 dark:via-neutral-700/30 dark:to-[#D89D40]/5 rounded-2xl p-8 border border-[#D89D40]/20 dark:border-[#FE9002]/20">
+        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed text-center">
+          Because we understand that digital marketing isn't just about being online—it's about being effective online. We combine data-driven strategies with creative execution to deliver campaigns that don't just look good, but perform exceptionally.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full">
+    <div class="mx-auto max-w-6xl">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-4">
+          Our Digital Marketing Services Include:
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-6 rounded-full"></div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Search Engine Optimization (SEO) -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Search Engine Optimization (SEO)</h3>
+          <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Improve your organic search rankings and drive qualified traffic to your website with our comprehensive SEO strategies.
+          </p>
+        </div>
+
+        <!-- Pay-Per-Click (PPC) Advertising -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Pay-Per-Click (PPC) Advertising</h3>
+          <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Maximize your ROI with targeted PPC campaigns across Google Ads, Facebook, LinkedIn, and other platforms.
+          </p>
+        </div>
+
+        <!-- Social Media Marketing -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Social Media Marketing</h3>
+          <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Build brand awareness and engage your audience across all major social media platforms with strategic content and campaigns.
+          </p>
+        </div>
+
+        <!-- Content Marketing -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Content Marketing</h3>
+          <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Create compelling, valuable content that attracts, engages, and converts your target audience into loyal customers.
+          </p>
+        </div>
+
+        <!-- Email Marketing -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Email Marketing</h3>
+          <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Nurture leads and maintain customer relationships with personalized email campaigns that drive engagement and sales.
+          </p>
+        </div>
+
+        <!-- Analytics & Reporting -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Analytics & Reporting</h3>
+          <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Track performance, measure ROI, and gain actionable insights with comprehensive analytics and detailed reporting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full bg-gray-50 dark:bg-neutral-900">
+    <div class="mx-auto max-w-4xl">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-4">
+          Our Digital Marketing Approach
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-6 rounded-full"></div>
+      </div>
+
+      <!-- Approach Steps -->
+      <div class="space-y-8">
+        <!-- Step 1 -->
+        <div class="flex items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-[#D89D40] to-[#FE9002] text-white rounded-xl flex items-center justify-center font-bold text-lg mr-6 shadow-lg">
+            1
+          </div>
+          <div class="flex-1 bg-white dark:bg-neutral-800 rounded-xl p-6 border border-gray-200 dark:border-neutral-700">
+            <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Strategy Development</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              We start by understanding your business goals, target audience, and competitive landscape to create a comprehensive digital marketing strategy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-[#D89D40] to-[#FE9002] text-white rounded-xl flex items-center justify-center font-bold text-lg mr-6 shadow-lg">
+            2
+          </div>
+          <div class="flex-1 bg-white dark:bg-neutral-800 rounded-xl p-6 border border-gray-200 dark:border-neutral-700">
+            <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Multi-Channel Execution</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              We implement coordinated campaigns across multiple digital channels to maximize reach and impact while maintaining consistent messaging.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-[#D89D40] to-[#FE9002] text-white rounded-xl flex items-center justify-center font-bold text-lg mr-6 shadow-lg">
+            3
+          </div>
+          <div class="flex-1 bg-white dark:bg-neutral-800 rounded-xl p-6 border border-gray-200 dark:border-neutral-700">
+            <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Data-Driven Optimization</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              We continuously monitor performance metrics and use data insights to optimize campaigns for better results and higher ROI.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex items-start">
+          <div class="shrink-0 w-12 h-12 bg-gradient-to-br from-[#D89D40] to-[#FE9002] text-white rounded-xl flex items-center justify-center font-bold text-lg mr-6 shadow-lg">
+            4
+          </div>
+          <div class="flex-1 bg-white dark:bg-neutral-800 rounded-xl p-6 border border-gray-200 dark:border-neutral-700">
+            <h3 class="text-xl font-bold text-neutral-800 dark:text-white mb-3">Transparent Reporting</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              We provide regular, detailed reports that show exactly how your campaigns are performing and what results they're delivering.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Works Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-6">
+        Why Our Digital Marketing Works
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-8 rounded-full"></div>
+      <p class="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-10">
+        We don't just follow digital marketing trends—we understand the psychology behind them. Our strategies are built on proven marketing principles, enhanced by cutting-edge digital tools and techniques.
+      </p>
+
+      <!-- Final CTA -->
+      <a
+        href="/contact"
+        class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-r from-[#D89D40] to-[#FE9002] hover:from-[#c8863a] hover:to-[#e8820a] border border-transparent text-white text-lg font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FE9002] focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 py-4 px-8 shadow-lg hover:shadow-xl hover:shadow-[#D89D40]/25 dark:hover:shadow-[#FE9002]/25 hover:scale-105 dark:focus:ring-offset-gray-800"
+      >
+        Accelerate Your Digital Growth
+        <svg class="flex-shrink-0 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full bg-gray-50 dark:bg-neutral-900">
+    <div class="mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-4">
+          Explore Our Other Services
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-6 rounded-full"></div>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <!-- Business Consulting -->
+        <a href="/services/business-consulting" class="group bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#D89D40] to-[#FE9002] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-800 dark:text-white mb-2 group-hover:text-[#FE9002] transition-colors">Business Consulting</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400">Strategic business guidance from MBA-level consultants.</p>
+        </a>
+
+        <!-- SEO Services -->
+        <a href="/services/seo-services" class="group bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-800 dark:text-white mb-2 group-hover:text-[#FE9002] transition-colors">SEO Services</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400">Be seen, get found, stay ahead with expert SEO strategies.</p>
+        </a>
+
+        <!-- Social Media Marketing -->
+        <a href="/services/social-media-marketing" class="group bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-neutral-700 hover:shadow-lg hover:border-[#FE9002]/20 dark:hover:border-[#FE9002]/20 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-800 dark:text-white mb-2 group-hover:text-[#FE9002] transition-colors">Social Media Marketing</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400">Engage, influence, and grow your social media presence.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

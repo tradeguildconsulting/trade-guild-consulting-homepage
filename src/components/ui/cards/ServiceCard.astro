@@ -2,10 +2,10 @@
 export interface Props {
   title: string;
   description: string;
-  modalId: string;
+  serviceUrl: string;
 }
 
-const { title, description, modalId } = Astro.props;
+const { title, description, serviceUrl } = Astro.props;
 ---
 
 <div class="group relative bg-white dark:!bg-neutral-800 border border-gray-200 dark:!border-neutral-700 rounded-xl shadow-sm dark:shadow-neutral-700/10 overflow-hidden hover:shadow-2xl hover:shadow-[#FE9002]/10 dark:hover:shadow-[#FE9002]/10 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]">
@@ -22,16 +22,15 @@ const { title, description, modalId } = Astro.props;
     </p>
     
     <!-- Learn More Button -->
-    <button
-      type="button"
+    <a
+      href={serviceUrl}
       class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#FE9002] text-white hover:bg-[#e8820a] focus:outline-none focus:bg-[#e8820a] dark:bg-[#FE9002] dark:hover:bg-[#e8820a] dark:focus:bg-[#e8820a] transition-all duration-300 hover:shadow-lg hover:shadow-[#FE9002]/30 dark:hover:shadow-[#FE9002]/30 group-hover:scale-105"
-      data-hs-overlay={`#${modalId}`}
     >
       Learn More
       <svg class="shrink-0 size-4 group-hover:translate-x-1 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="m9 18 6-6-6-6"></path>
       </svg>
-    </button>
+    </a>
   </div>
 
   <!-- Enhanced Hover Effect -->
