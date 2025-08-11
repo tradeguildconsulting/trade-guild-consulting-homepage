@@ -7,7 +7,7 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://tradeguildconsulting.com",
+  site: "https://tradeguildconsulting.github.io/trade-guild-consulting-homepage/",
   image: {
     domains: ["images.unsplash.com"],
   },
