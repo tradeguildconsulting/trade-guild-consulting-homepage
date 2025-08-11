@@ -1,29 +1,33 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Get answers to common questions about our consulting services and approach.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What makes Trade Guild Consulting different from other consulting firms?",
+      "answer": "Every member of our consulting team holds an MBA, bringing advanced knowledge and real-world experience to every project. We don't just give generic advice—we deliver strategies rooted in proven business principles and tailored to your unique goals."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "What services do you offer?",
+      "answer": "We offer three comprehensive service areas: Business Consulting Excellence (business planning, strategic growth, leadership coaching, operational efficiency, financial consulting, and exit strategy), Digital Marketing Mastery (SEO, PPC, social media, content marketing, email campaigns, and analytics), and Complete Business Transformation (combining all business and marketing services)."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "Do you handle both business strategy and marketing?",
+      "answer": "Absolutely! We believe great marketing works because it's rooted in solid business strategy. Whether you need business consulting, digital marketing, or both, we provide comprehensive solutions that align your business goals with effective marketing execution."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "What's included in your digital marketing services?",
+      "answer": "Our digital marketing includes complete SEO services (on-page, off-page, and technical), PPC advertising, social media management (organic and paid), content marketing (blogs, videos, infographics), email marketing campaigns, and comprehensive analytics and reporting. We build digital ecosystems designed for growth."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "How do you approach SEO?",
+      "answer": "We don't chase algorithms—we master them. Our SEO process includes audit and discovery, strategy development, precision execution (on-page optimization, backlink building, technical fixes), and ongoing optimization. We focus on long-term growth and sustainable visibility, not just rankings."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "What types of businesses do you work with?",
+      "answer": "We work with businesses of all sizes, from startups to established enterprises. Good marketing is universal—whether you're B2B, B2C, selling strawberries or sofas, great marketing works because it gets the right products and services in front of the right audience."
+    },
+    {
+      "question": "Do you offer ongoing support after the initial consultation?",
+      "answer": "Absolutely! We believe in long-term partnerships. We provide ongoing evaluation and support, regularly assessing the effectiveness of our strategies and refining them as your business evolves and new challenges arise."
     }
   ]
 }

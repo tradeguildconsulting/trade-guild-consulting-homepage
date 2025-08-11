@@ -1,6 +1,6 @@
 ---
 // Import the necessary dependencies
-import { Image } from "astro:assets";
+import EnhancedImage from "@components/ui/EnhancedImage.astro";
 import IconBlock from "@components/ui/blocks/IconBlock.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
@@ -25,16 +25,17 @@ const { title, subTitle, src, alt, features } = Astro.props;
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
   <!-- Block to display the feature image -->
-  <div class="relative mb-6 overflow-hidden md:mb-8">
+  <div class="relative mb-6 overflow-hidden rounded-2xl md:mb-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 max-h-96 md:max-h-[32rem]">
     {
       src && alt && (
-        <Image
+        <EnhancedImage
           src={src}
           alt={alt}
+          variant="feature"
           class="h-full w-full object-cover object-center"
-          draggable={"false"}
-          format={"avif"}
-          loading={"eager"}
+          draggable="false"
+          format="webp"
+          loading="eager"
         />
       )
     }

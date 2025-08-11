@@ -1,6 +1,6 @@
 ---
 // Import all required components and utilities
-import { Image } from "astro:assets";
+import EnhancedImage from "@components/ui/EnhancedImage.astro";
 import type { CollectionEntry } from "astro:content";
 import AvatarBlogLarge from "@components/ui/avatars/AvatarBlogLarge.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
@@ -18,10 +18,11 @@ interface Props {
   <!-- Container for the blog post's cover image -->
   <div class="sm:order-2">
     <div class="relative rounded-lg pt-[50%] sm:pt-[100%]">
-      <Image
-        class="absolute start-0 top-0 size-full rounded-xl object-cover"
+      <EnhancedImage
+        class="absolute start-0 top-0 size-full object-cover"
         src={blogEntry.data.cardImage}
         alt={blogEntry.data.cardImageAlt}
+        variant="card"
         draggable={"false"}
         loading={"eager"}
         format={"avif"}
@@ -35,8 +36,8 @@ interface Props {
       class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight"
     >
       <a
-        class="outline-hidden ring-zinc-500 transition duration-300 hover:text-orange-400 focus-visible:ring-3 dark:text-neutral-300 dark:ring-zinc-200 dark:hover:text-neutral-50 dark:focus:outline-hidden"
-        href={recentBlogLocale && recentBlogLocale !== "en" ? `/${recentBlogLocale}/blog/${blogEntry.id.replace(/^fr\//, '')}/` : `/blog/${blogEntry.id.replace(/^en\//, '')}/`}
+        class="outline-hidden ring-zinc-500 transition duration-300 hover:text-[#FE9002] focus-visible:ring-3 dark:text-neutral-300 dark:ring-zinc-200 dark:hover:text-[#FE9002] dark:focus:outline-hidden"
+        href={`/blog/${blogEntry.id.replace(/^en\//, '')}/`}
       >
         {blogEntry.data.description}
       </a>
@@ -57,7 +58,7 @@ interface Props {
     <!-- Read More button which is a link to the blog post detailed page -->
     <div class="mt-5">
       <PrimaryCTA
-        url={recentBlogLocale && recentBlogLocale !== "en" ? `/${recentBlogLocale}/blog/${blogEntry.id.replace(/^fr\//, '')}/` : `/blog/${blogEntry.id.replace(/^en\//, '')}/`}
+        url={`/blog/${blogEntry.id.replace(/^en\//, '')}/`}
         title="Read More"
         data-astro-prefetch
       />

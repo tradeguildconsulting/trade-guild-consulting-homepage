@@ -1,0 +1,427 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import { SITE } from "@/data_files/constants";
+
+// Hero image - we'll use a professional business image
+import aboutHeroImage from "@images/person-working.avif";
+
+const pageTitle = `About Us | ${SITE.title}`;
+---
+
+<MainLayout title={pageTitle}>
+  <HeroSection
+    title=`About <span class="text-[#FE9002]">Trade Guild Consulting</span>`
+    subTitle="MBA-level expertise meets real-world business acumen. We don't just give advice—we deliver strategies that work."
+    primaryBtn="Get Started"
+    primaryBtnURL="/contact"
+    secondaryBtn="View Services"
+    secondaryBtnURL="/services"
+    withReview={false}
+    src={aboutHeroImage}
+    alt="Professional consultant working on business strategy"
+  />
+
+  <!-- Our Story Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="mx-auto max-w-5xl">
+      <div class="grid gap-12 md:grid-cols-2 md:gap-16 xl:gap-20 md:items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl">
+            Why Choose Trade Guild Consulting?
+          </h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+            Because business isn't just what we do—it's what we know. Every member of our consulting team holds an MBA, bringing advanced knowledge and real-world experience to every project.
+          </p>
+          <p class="mt-5 text-neutral-600 dark:text-neutral-400">
+            We don't just give generic advice; we deliver strategies rooted in proven business principles and tailored to your unique goals. Our consultants combine academic expertise with real-world business acumen. We know the theory, but more importantly, we know how to apply it where it matters most—in your business.
+          </p>
+          
+          <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+            <a
+              class="inline-flex justify-center items-center gap-x-3 text-center bg-[#FE9002] hover:bg-[#e8820a] border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE9002] focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+              href="/contact"
+            >
+              Partner with Us
+              <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="bg-gradient-to-br from-[#FE9002] to-[#D89D40] rounded-xl p-8 text-white">
+            <div class="text-center">
+              <div class="flex justify-center items-center w-16 h-16 bg-white/20 rounded-full mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Real World Expertise</h3>
+              <p class="text-lg opacity-90 mb-6">Every consultant on our team holds an MBA degree</p>
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div class="bg-white/10 rounded-lg p-3">
+                  <div class="font-semibold">Strategy</div>
+                  <div class="opacity-80">Business Planning</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-3">
+                  <div class="font-semibold">Marketing</div>
+                  <div class="opacity-80">Digital Growth</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-3">
+                  <div class="font-semibold">Operations</div>
+                  <div class="opacity-80">Process Optimization</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-3">
+                  <div class="font-semibold">Analytics</div>
+                  <div class="opacity-80">Data-Driven Insights</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="mx-auto max-w-5xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl">
+          Our Proven Approach
+        </h2>
+        <p class="mt-3 text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
+          We combine academic expertise with real-world business acumen. We know the theory, but more importantly, we know how to apply it where it matters most—in your business.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div class="space-y-8">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-[#FE9002] rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
+                Collaborative Problem-Solving
+              </h3>
+              <p class="text-neutral-600 dark:text-neutral-400">
+                We meet with your leadership team to discuss the challenges you're facing, digging deep to understand the root causes.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-[#FE9002] rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
+                Strategic Solutions
+              </h3>
+              <p class="text-neutral-600 dark:text-neutral-400">
+                We develop tailored strategies and provide practical tools designed to address your specific business issues.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-[#FE9002] rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
+                Hands-On Support
+              </h3>
+              <p class="text-neutral-600 dark:text-neutral-400">
+                We work alongside you to implement these strategies, providing guidance and adjustments as needed.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-[#FE9002] rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
+                Ongoing Evaluation
+              </h3>
+              <p class="text-neutral-600 dark:text-neutral-400">
+                We regularly assess the effectiveness of our strategies, refining them as your business evolves and new challenges arise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Marketing Philosophy Section -->
+  <section class="relative mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full overflow-hidden rounded-3xl">
+    <!-- Enhanced Background with Gradient and Pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-orange-50/30 to-yellow-50/20 dark:from-neutral-900 dark:via-neutral-900/95 dark:to-neutral-800/90"></div>
+    
+    <!-- Geometric Pattern Overlay -->
+    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.02]">
+      <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="philosophy-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="1.5" fill="currentColor" class="text-[#FE9002]"/>
+            <circle cx="5" cy="5" r="0.8" fill="currentColor" class="text-[#FE9002]"/>
+            <circle cx="15" cy="15" r="0.8" fill="currentColor" class="text-[#FE9002]"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#philosophy-pattern)"/>
+      </svg>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-[#D89D40]/10 to-[#FE9002]/10 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-[#FE9002]/10 to-[#D89D40]/10 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-[#D89D40]/5 to-[#FE9002]/5 rounded-full blur-lg animate-pulse" style="animation-delay: 4s;"></div>
+
+    <div class="relative z-10">
+      <!-- Enhanced Header -->
+      <div class="mx-auto max-w-5xl text-center mb-16">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#D89D40] to-[#FE9002] rounded-2xl mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        
+        <h2 class="text-4xl font-bold text-neutral-800 dark:text-neutral-100 lg:text-5xl mb-4">
+          Our Marketing Philosophy
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-6 rounded-full"></div>
+        <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+          Good marketing is universal—rooted in understanding your brand, market, and audience
+        </p>
+      </div>
+
+      <!-- Enhanced Content Grid -->
+      <div class="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-6xl mx-auto">
+        <div>
+          <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
+            Foundation First
+          </h3>
+          <p class="text-neutral-600 dark:text-neutral-400 mb-6">
+            Marketing isn't a one-size-fits-all strategy, but the foundation is always the same: understanding your brand, your market, and your audience. We start with brand discovery, competitor analysis, and strategic recommendations.
+          </p>
+          
+          <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
+            Execution with Precision
+          </h3>
+          <p class="text-neutral-600 dark:text-neutral-400">
+            Once the plan is in place, we execute with ongoing campaign management, quarterly check-ins, and bi-annual reviews. We don't just execute marketing plans—we build marketing systems that adapt, evolve, and deliver results.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
+            Comprehensive Services
+          </h3>
+          <ul class="space-y-3 text-neutral-600 dark:text-neutral-400">
+            <li class="flex items-start">
+              <svg class="shrink-0 size-4 mt-1 text-[#FE9002]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              <span class="ms-2">Digital Marketing: SEO, PPC, email marketing, and more</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="shrink-0 size-4 mt-1 text-[#FE9002]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              <span class="ms-2">Social Media Marketing: Strategy, content creation, and community management</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="shrink-0 size-4 mt-1 text-[#FE9002]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              <span class="ms-2">Content Marketing: Blog posts, articles, videos, and infographics</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="shrink-0 size-4 mt-1 text-[#FE9002]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              <span class="ms-2">Brand Messaging & Storytelling: Compelling narratives that resonate</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="shrink-0 size-4 mt-1 text-[#FE9002]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              <span class="ms-2">Marketing Analytics & Reporting: Data-driven insights to measure success</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Expertise Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="mx-auto max-w-5xl text-center">
+      <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl">
+        MBA-Level Expertise Across All Business Functions
+      </h2>
+      <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+        Our comprehensive business knowledge spans every aspect of modern enterprise
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-8">
+      <!-- Business Consulting -->
+      <div class="group relative block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+          <div class="bg-gradient-to-br from-[#D89D40] to-[#FE9002] w-full h-64 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl flex items-center justify-center">
+            <div class="text-center text-white">
+              <h3 class="text-2xl font-bold">Business Strategy</h3>
+              <p class="mt-2 text-sm opacity-90">Planning • Growth • Leadership • Operations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing Services -->
+      <div class="group relative block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+          <div class="bg-gradient-to-br from-[#D89D40] to-[#FE9002] w-full h-64 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl flex items-center justify-center">
+            <div class="text-center text-white">
+              <h3 class="text-2xl font-bold">Digital Marketing</h3>
+              <p class="mt-2 text-sm opacity-90">SEO • Social Media • PPC • Content Strategy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="relative mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 2xl:max-w-full overflow-hidden rounded-3xl">
+    <!-- Enhanced Background with Gradient and Pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20 dark:from-neutral-900 dark:via-neutral-900/95 dark:to-neutral-800/90"></div>
+    
+    <!-- Geometric Pattern Overlay -->
+    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.02]">
+      <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="values-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="1.5" fill="currentColor" class="text-[#FE9002]"/>
+            <circle cx="5" cy="5" r="0.8" fill="currentColor" class="text-[#FE9002]"/>
+            <circle cx="15" cy="15" r="0.8" fill="currentColor" class="text-[#FE9002]"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#values-pattern)"/>
+      </svg>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-[#D89D40]/10 to-[#FE9002]/10 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-20 left-10 w-32 h-32 bg-gradient-to-br from-[#FE9002]/10 to-[#D89D40]/10 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 right-1/4 w-16 h-16 bg-gradient-to-br from-[#D89D40]/5 to-[#FE9002]/5 rounded-full blur-lg animate-pulse" style="animation-delay: 4s;"></div>
+
+    <div class="relative z-10">
+      <!-- Enhanced Header -->
+      <div class="mx-auto max-w-5xl text-center mb-16">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#D89D40] to-[#FE9002] rounded-2xl mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+        </div>
+        
+        <h2 class="text-4xl font-bold text-neutral-800 dark:text-neutral-100 lg:text-5xl mb-4">
+          Our Core Values
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#D89D40] to-[#FE9002] mx-auto mb-6 rounded-full"></div>
+        <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+          The principles that guide everything we do and shape every decision we make
+        </p>
+      </div>
+
+      <!-- Enhanced Values Grid -->
+      <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+        <div class="text-center">
+          <div class="flex justify-center items-center w-16 h-16 bg-[#FE9002] rounded-full mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">Excellence</h3>
+          <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+            We deliver nothing less than exceptional results, backed by rigorous analysis and proven methodologies.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="flex justify-center items-center w-16 h-16 bg-[#FE9002] rounded-full mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">Partnership</h3>
+          <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+            We work alongside you as true partners, invested in your success and committed to your growth.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="flex justify-center items-center w-16 h-16 bg-[#FE9002] rounded-full mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">Results</h3>
+          <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+            We measure our success by your success. Every strategy is designed to deliver measurable, sustainable results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl">
+        Ready to Transform Your Business?
+      </h2>
+      <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+        Let's discuss how our expertise can help you overcome challenges and achieve your goals.
+      </p>
+      <div class="mt-7 grid gap-3 w-full sm:inline-flex sm:justify-center">
+        <a
+          class="inline-flex justify-center items-center gap-x-3 text-center bg-[#FE9002] hover:bg-[#e8820a] border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE9002] focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+          href="/contact"
+        >
+          Get Started Today
+          <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a
+          class="inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-medium text-neutral-600 shadow-xs outline-hidden ring-zinc-500 focus-visible:ring-3 transition duration-300 border border-neutral-200 bg-neutral-300 hover:bg-neutral-400/50 hover:text-neutral-600 active:text-neutral-700 disabled:pointer-events-none disabled:opacity-50 2xl:text-base ring-zinc-500 dark:border-neutral-700 dark:bg-zinc-700 dark:text-neutral-300 dark:ring-zinc-200 dark:hover:bg-zinc-600 dark:focus:outline-hidden"
+          href="/services"
+        >
+          View Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

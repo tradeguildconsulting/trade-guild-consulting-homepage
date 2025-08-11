@@ -1,38 +1,58 @@
 {
-  "title": "Simple, Transparent Pricing",
-  "subTitle": "Boost efficiency with ScrewFast's clear, value-driven plans.",
-  "badge": "Best value",
-  "thirdOption": "Enterprise Solutions?",
+  "title": "Comprehensive Service Packages",
+  "subTitle": "Choose the right level of support for your business transformation journey.",
+  "badge": "Most Popular",
+  "thirdOption": "Need a Custom Solution?",
   "btnText": "Get a Custom Quote",
 
   "starterKit": {
-    "name": "Starter Kit",
-    "description": "Best option for DIY projects",
-    "price": "49",
-    "cents": ".00",
-    "billingFrequency": "USD / monthly",
+    "name": "Business Consulting Excellence",
+    "description": "From business planning to exit strategy and everything in between",
     "features": [
-      "Key hardware tools",
-      "Access to guides & tutorials",
-      "Standard support"
+      "Comprehensive Business Planning",
+      "Strategic Growth Consulting",
+      "Leadership & Management Coaching",
+      "Operational Efficiency Optimization",
+      "Financial Consulting & Analysis",
+      "Exit Strategy & Succession Planning",
+      "MBA-level expertise with proven business principles",
+      "Collaborative problem-solving approach"
     ],
-    "purchaseBtnTitle": "Get the Starter Kit",
-    "purchaseLink": "#"
+    "purchaseBtnTitle": "Get Business Consulting",
+    "purchaseLink": "/contact"
   },
 
   "professionalToolbox": {
-    "name": "Professional Toolbox",
-    "description": "Best for large scale uses",
-    "price": "89",
-    "cents": ".00",
-    "billingFrequency": "USD / monthly",
+    "name": "Digital Marketing Mastery",
+    "description": "Comprehensive digital ecosystems designed for growth",
     "features": [
-      "Premium tool selection",
-      "Priority support",
-      "Exclusive content & deals",
-      "Bulk order discounts"
+      "Complete SEO Services (On-Page, Off-Page, Technical)",
+      "Pay-Per-Click Advertising (Google Ads, Retargeting)",
+      "Social Media Management (Organic & Paid)",
+      "Content Marketing (Blogs, Videos, Infographics)",
+      "Email Marketing (Newsletters, Drip Campaigns)",
+      "Marketing Analytics & Reporting",
+      "Data-driven strategies that connect your brand with the right audience",
+      "Continuous optimization and performance tracking"
     ],
-    "purchaseBtnTitle": "Get the Professional Toolbox",
-    "purchaseLink": "#"
+    "purchaseBtnTitle": "Start Digital Marketing",
+    "purchaseLink": "/contact"
+  },
+
+  "enterprisePackage": {
+    "name": "Complete Business Transformation",
+    "description": "The ultimate partnership for businesses ready to dominate",
+    "features": [
+      "All Business Consulting Services",
+      "Complete Digital Marketing Suite",
+      "SEO Mastery & PPC Management",
+      "Full Social Media Strategy & Execution",
+      "Content Marketing & Email Campaigns",
+      "Advanced Analytics & Reporting",
+      "Dedicated account management",
+      "Priority support & strategic guidance"
+    ],
+    "purchaseBtnTitle": "Transform Your Business",
+    "purchaseLink": "/contact"
   }
 }

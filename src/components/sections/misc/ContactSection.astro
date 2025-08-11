@@ -7,11 +7,16 @@ import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astr
 import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
+import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
+import navigationStrings from "@utils/navigation.ts";
+import { CONTACT } from "@data/constants";
+
+const strings = navigationStrings;
 
 // Define the variables that will be used in this component
 const title: string = "Contact us";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
+  "Ready to transform your business? Let's discuss how our experience can help you overcome challenges and achieve your goals.";
 const formTitle: string = "Fill in the form below";
 const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 ---
@@ -77,41 +82,66 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
       <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
-          heading="Knowledgebase"
-          content="Browse through all of our knowledgebase articles."
+          heading="Business Resources"
+          content="Access our library of business insights and strategic guides."
           isLinkVisible={true}
-          linkTitle="Visit guides & tutorials"
-          linkURL="#"
+          linkTitle="Visit insights & resources"
+          linkURL="/blog"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
 
         <ContactIconBlock
           heading="FAQ"
-          content="Explore our FAQ for quick, clear answers to common queries."
+          content="Get answers to common questions about our consulting services."
           isLinkVisible={true}
           linkTitle="Visit FAQ"
-          linkURL="#"
+          linkURL="/#faq"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Visit our office"
-          content="UK ScrewFast"
-          isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
-          ><Icon name="mapPin" />
-        </ContactIconBlock>
-
-        <ContactIconBlock
           heading="Contact us by email"
-          content="Prefer the written word? Drop us an email at"
+          content="Prefer email? Reach out to discuss your business challenges"
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
-          linkURL="#"
+          linkTitle={CONTACT.email}
+          linkURL={`mailto:${CONTACT.email}`}
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>
+
+        <div class="flex gap-x-7 py-6">
+          <Icon name="share" />
+          <div class="grow">
+            <h3 class="font-bold text-neutral-700 dark:text-neutral-300">
+              Follow us on social media
+            </h3>
+            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+              Stay connected and get the latest updates
+            </p>
+            <div class="mt-2 flex gap-2">
+              <FooterSocialLink url={strings.socialLinks.facebook}>
+                <Icon name="facebookFooter" />
+              </FooterSocialLink>
+
+              <FooterSocialLink url={strings.socialLinks.linkedin}>
+                <Icon name="linkedinFooter" />
+              </FooterSocialLink>
+
+              <FooterSocialLink url={strings.socialLinks.instagram}>
+                <Icon name="instagramFooter" />
+              </FooterSocialLink>
+
+              <FooterSocialLink url={strings.socialLinks.tiktok}>
+                <Icon name="tiktokFooter" />
+              </FooterSocialLink>
+
+              <FooterSocialLink url={strings.socialLinks.youtube}>
+                <Icon name="youtubeFooter" />
+              </FooterSocialLink>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

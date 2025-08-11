@@ -95,6 +95,33 @@
   --color-zinc-800: oklch(0.274 0.006 286.033);
   --color-zinc-900: oklch(0.21 0.006 285.885);
   --color-zinc-950: oklch(0.141 0.005 285.823);
+
+  /* Brand colors - focused approach */
+  --color-brand-gold: #D89D40;
+  --color-brand-orange: #FE9002;
+
+  /* Custom brand color utilities */
+  --color-brand-gold-50: #fef9f0;
+  --color-brand-gold-100: #fdf2e0;
+  --color-brand-gold-200: #fae2c0;
+  --color-brand-gold-300: #f6cc95;
+  --color-brand-gold-400: #f0b068;
+  --color-brand-gold-500: #D89D40;
+  --color-brand-gold-600: #c88a35;
+  --color-brand-gold-700: #a6722c;
+  --color-brand-gold-800: #855c26;
+  --color-brand-gold-900: #6b4a22;
+
+  --color-brand-orange-50: #fff7ed;
+  --color-brand-orange-100: #ffedd5;
+  --color-brand-orange-200: #fed7aa;
+  --color-brand-orange-300: #fdba74;
+  --color-brand-orange-400: #fb923c;
+  --color-brand-orange-500: #FE9002;
+  --color-brand-orange-600: #ea7c00;
+  --color-brand-orange-700: #c26100;
+  --color-brand-orange-800: #9a4e02;
+  --color-brand-orange-900: #7c3f06;
 }
 
 /*
@@ -117,5 +144,77 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+
+  /* Modal scroll lock styles */
+  .modal-open {
+    overflow: hidden !important;
+    height: 100vh !important;
+    position: fixed !important;
+    width: 100% !important;
+    touch-action: none !important;
+  }
+
+  /* Ensure modal content scrolls properly */
+  .modal-content-scroll {
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Prevent background scroll on mobile */
+  .modal-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow: hidden !important;
+    touch-action: none !important;
+  }
+
+  /* Additional scroll prevention for modal open state */
+  .modal-open * {
+    scroll-behavior: auto !important;
+  }
+
+  /* Ensure modal backdrop prevents all scrolling */
+  .hs-overlay-open .modal-backdrop {
+    touch-action: none !important;
+  }
+
+  /* Override any Lenis styles when modal is open */
+  .modal-open [data-lenis-prevent] {
+    overscroll-behavior: contain !important;
+  }
+
+  /* Mobile responsiveness utilities */
+  @media (max-width: 640px) {
+    /* Ensure text doesn't overflow containers on mobile */
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    
+    /* Prevent horizontal scrolling */
+    body {
+      overflow-x: hidden;
+    }
+    
+    /* Ensure containers don't exceed viewport width */
+    .container, section, div {
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+  }
+
+  /* Extra small screens */
+  @media (max-width: 375px) {
+    /* More aggressive text wrapping for very small screens */
+    * {
+      word-break: break-word;
+    }
   }
 }

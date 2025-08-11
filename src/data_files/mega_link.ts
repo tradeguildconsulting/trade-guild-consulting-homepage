@@ -1,44 +1,44 @@
 // Define data structures for services and success stories
 export const servicesData = [
   {
-    title: "Explore Advice and Explanations",
+    title: "Business Strategy Consulting",
     description:
-      "Dive deep into helpful guides and explanations for all of ScrewFast's features",
+      "Comprehensive strategic planning and business analysis with MBA-level expertise",
     icon: "guides",
-    url: "#",
+    url: "/services",
   },
   {
-    title: "Discover Integrations",
+    title: "Digital Marketing Solutions",
     description:
-      "Supercharge Your Workflow. Seamless integrations with all your favorite tools",
+      "Data-driven marketing strategies including SEO, PPC, and content marketing",
     icon: "puzzle",
-    url: "#",
+    url: "/services",
   },
   {
-    title: "Expert Services",
-    description: "Go beyond tools with ScrewFast's expert services",
+    title: "Expert Consulting Services",
+    description: "Professional consulting services tailored to your business needs",
     icon: "rocket",
-    url: "#",
+    url: "/services",
   },
   {
-    title: "Cutting-Edge Tools",
+    title: "Strategic Business Solutions",
     description:
-      "Build Smarter, Faster. Experience next-level efficiency with ScrewFast's cutting-edge construction tools",
-    icon: "hammer",
-    url: "#",
+      "Transform your business with proven strategies and expert guidance",
+    icon: "strategy",
+    url: "/services",
   },
   {
-    title: "Simple Plans",
+    title: "Transparent Pricing",
     description:
-      "Boost your efficiency with ScrewFast's straightforward, value-driven plans",
+      "Clear, value-driven consulting packages designed for business growth",
     icon: "sparks",
-    url: "#",
+    url: "/contact",
   },
   {
-    title: "Community Forum",
-    description: "Learn, share, and connect with other ScrewFast users",
+    title: "Client Success Stories",
+    description: "Learn from our clients' success and business transformations",
     icon: "community",
-    url: "#",
+    url: "/insights",
   },
 ];
 
@@ -46,9 +46,9 @@ export const successStoriesData = [
   {
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    alt: "Image Description",
+    alt: "Business transformation success story",
     description:
-      "See how ScrewFast has empowered businesses of all sizes to achieve outstanding results.",
-    learnMoreUrl: "#",
+      "See how Trade Guild Consulting has empowered businesses of all sizes to achieve outstanding results.",
+    learnMoreUrl: "/insights",
   },
 ];

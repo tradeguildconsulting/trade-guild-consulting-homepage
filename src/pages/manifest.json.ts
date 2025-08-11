@@ -1,6 +1,6 @@
 import type { APIRoute, ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
-import icon from "@images/icon.png";
+import icon from "@images/logo.png";
 import maskableIcon from "@images/icon-maskable.png";
 
 interface Favicon {
@@ -44,8 +44,8 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "ScrewFast",
-    name: "ScrewFast",
+    short_name: "Trade Guild Consulting",
+    name: "Trade Guild Consulting",
     icons,
     display: "minimal-ui",
     id: "/",

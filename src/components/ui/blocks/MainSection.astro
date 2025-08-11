@@ -3,7 +3,7 @@
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 // Destructure the props passed to the Astro component
-const { title, subTitle, btnExists, btnTitle, btnURL } = Astro.props;
+const { title, subTitle, btnExists, btnTitle, btnURL, buttonPosition = "bottom" } = Astro.props;
 // Define TypeScript interface for props
 interface Props {
   title: string;
@@ -11,6 +11,7 @@ interface Props {
   btnExists?: boolean;
   btnTitle?: string;
   btnURL?: string;
+  buttonPosition?: "bottom" | "right";
 }
 ---
 
@@ -18,26 +19,54 @@ interface Props {
 <section
   class="mx-auto mt-10 max-w-[85rem] px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <div class="max-w-(--breakpoint-md)">
-    <!-- Section title -->
-    <h1
-      class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200"
-    >
-      {title}
-    </h1>
-    <!-- Section subtitle -->
-    <p
-      class="mb-8 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400 sm:text-xl"
-    >
-      {subTitle}
-    </p>
-    <!-- Conditional rendering of PrimaryCTA component if 'btnExists' property is truthy -->
-    {
-      btnExists ? (
-        <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+  {buttonPosition === "right" ? (
+    <!-- Right-aligned button layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 items-center">
+      <!-- Content column -->
+      <div class="lg:col-span-3">
+        <!-- Section title -->
+        <h1
+          class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200"
+        >
+          {title}
+        </h1>
+        <!-- Section subtitle -->
+        <p
+          class="mb-8 lg:mb-0 text-pretty font-normal text-neutral-600 dark:text-neutral-400 sm:text-xl"
+        >
+          {subTitle}
+        </p>
+      </div>
+      <!-- Button column -->
+      {btnExists ? (
+        <div class="lg:col-span-1 flex justify-start lg:justify-center">
           <PrimaryCTA title={btnTitle} url={btnURL} />
         </div>
-      ) : null
-    }
-  </div>
+      ) : null}
+    </div>
+  ) : (
+    <!-- Default bottom-aligned button layout -->
+    <div class="max-w-(--breakpoint-md)">
+      <!-- Section title -->
+      <h1
+        class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200"
+      >
+        {title}
+      </h1>
+      <!-- Section subtitle -->
+      <p
+        class="mb-8 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400 sm:text-xl"
+      >
+        {subTitle}
+      </p>
+      <!-- Conditional rendering of PrimaryCTA component if 'btnExists' property is truthy -->
+      {
+        btnExists ? (
+          <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <PrimaryCTA title={btnTitle} url={btnURL} />
+          </div>
+        ) : null
+      }
+    </div>
+  )}
 </section>

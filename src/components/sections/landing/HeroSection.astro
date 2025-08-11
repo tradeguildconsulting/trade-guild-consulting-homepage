@@ -1,6 +1,6 @@
 ---
 // Import the necessary dependencies
-import { Image } from "astro:assets";
+import EnhancedImage from "@components/ui/EnhancedImage.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
@@ -78,15 +78,16 @@ interface Props {
   </div>
   <!-- Hero Image Section -->
   <div class="flex w-full">
-      <div class="top-12 overflow-hidden">
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
 	{src && alt &&
-	<Image
+	<EnhancedImage
         src={src}
         alt={alt}
-        class="h-full w-full scale-110 object-cover object-center"
-        draggable={"false"}
-        loading={"eager"}
-        format={"avif"}
+        variant="hero"
+        class="h-full w-full object-cover object-center"
+        draggable="false"
+        loading="eager"
+        format="webp"
 	 />
 	}
     </div>

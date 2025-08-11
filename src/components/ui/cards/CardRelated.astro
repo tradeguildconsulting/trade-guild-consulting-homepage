@@ -1,6 +1,6 @@
 ---
 // Import necessary modules and utilities
-import { Image } from "astro:assets";
+import EnhancedImage from "@components/ui/EnhancedImage.astro";
 import { formatDate } from "@utils/utils";
 import type { CollectionEntry } from "astro:content";
 
@@ -14,22 +14,21 @@ interface Props {
 
 <a
   class="group block rounded-xl outline-hidden ring-zinc-500 transition duration-300 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden"
-  href={recentBlogLocale && recentBlogLocale !== "en"
-    ? `/${recentBlogLocale}/blog/${blogEntry.id.replace(/^fr\//, "")}/`
-    : `/blog/${blogEntry.id.replace(/^en\//, "")}/`}
+  href={`/blog/${blogEntry.id.replace(/^en\//, "")}/`}
   data-astro-prefetch
 >
   <div>
-    <Image
-      class="aspect-video rounded-xl"
+    <EnhancedImage
+      class="aspect-video"
       src={blogEntry.data.cardImage}
       alt={blogEntry.data.cardImageAlt}
+      variant="card"
       draggable={"false"}
       format={"avif"}
     />
     <!-- The title of the blog post -->
     <h3
-      class="mt-2 text-balance text-lg font-medium text-neutral-800 group-hover:text-orange-400 dark:text-neutral-300 dark:group-hover:text-neutral-50"
+      class="mt-2 text-balance text-lg font-medium text-neutral-800 group-hover:text-[#FE9002] dark:text-neutral-300 dark:group-hover:text-neutral-50"
     >
       {blogEntry.data.title}
     </h3>

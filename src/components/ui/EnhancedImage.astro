@@ -1,0 +1,78 @@
+---
+// Import the Image component from astro:assets
+import { Image } from "astro:assets";
+
+// Destructure the component properties from Astro.props
+const { 
+  src, 
+  alt, 
+  variant = 'default',
+  class: customClass = '',
+  loading = 'lazy',
+  format = 'webp',
+  draggable = "false",
+  ...rest 
+} = Astro.props;
+
+// Define TypeScript interface for the properties
+interface Props {
+  src: any;
+  alt: string;
+  variant?: 'hero' | 'feature' | 'tab' | 'tabSecond' | 'card' | 'default';
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  format?: string;
+  draggable?: "true" | "false";
+  [key: string]: any; // Allow other Image props
+}
+
+// Define styling variants with improved image quality settings
+const variantStyles = {
+  hero: "rounded-2xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700 hover:scale-105 transition-transform duration-500 ease-out",
+  feature: "rounded-2xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700 hover:scale-105 transition-transform duration-500 ease-out",
+  tab: "shadow-2xl rounded-2xl dark:shadow-neutral-900/[.3] ring-1 ring-gray-200 dark:ring-gray-600 hover:shadow-3xl hover:scale-105 transition-all duration-500 ease-out",
+  tabSecond: "shadow-2xl bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-700 dark:to-neutral-800 rounded-2xl dark:shadow-neutral-900/[.3] ring-1 ring-gray-200 dark:ring-gray-600 hover:shadow-3xl hover:scale-105 transition-all duration-500 ease-out",
+  card: "rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-600 hover:shadow-xl hover:scale-102 transition-all duration-300 ease-out",
+  default: "rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-600 hover:shadow-xl transition-shadow duration-300 ease-out"
+};
+
+// Define optimal dimensions for different variants
+const variantDimensions = {
+  hero: { width: 800, height: 600 },
+  feature: { width: 600, height: 400 },
+  tab: { width: 500, height: 350 },
+  tabSecond: { width: 500, height: 350 },
+  card: { width: 400, height: 300 },
+  default: { width: 400, height: 300 }
+};
+
+// Get the appropriate styling based on variant
+const getVariantClass = (variant: string) => {
+  return variantStyles[variant as keyof typeof variantStyles] || variantStyles.default;
+};
+
+// Get optimal dimensions for the variant
+const getDimensions = (variant: string) => {
+  return variantDimensions[variant as keyof typeof variantDimensions] || variantDimensions.default;
+};
+
+// Combine variant styles with custom classes
+const combinedClass = `${getVariantClass(variant)} ${customClass}`.trim();
+
+// Get dimensions for this variant
+const dimensions = getDimensions(variant);
+---
+
+<!-- Enhanced Image component with consistent styling and optimized dimensions -->
+<Image
+  src={src}
+  alt={alt}
+  class={combinedClass}
+  loading={loading}
+  format={format}
+  draggable={draggable}
+  width={dimensions.width}
+  height={dimensions.height}
+  quality={90}
+  {...rest}
+/>
