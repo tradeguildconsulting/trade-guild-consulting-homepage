@@ -50,3 +50,8 @@ export const ANALYTICS = {
 };
 
 export const partnersData = []
+
+export const FEATURE_FLAGS = {
+  showNewsletter: false,
+  showContactForm: false,
+};

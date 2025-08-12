@@ -5,7 +5,7 @@ import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro"
 import navigationStrings from "@utils/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
-import { SITE, CONTACT } from "@data/constants";
+import { SITE, CONTACT, FEATURE_FLAGS } from "@data/constants";
 
 const strings = navigationStrings;
 
@@ -53,18 +53,20 @@ const crafted: string = "Crafted by";
         ))
       }
 
-      <div class="col-span-2">
-        <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
-          {sectionThreeTitle}
-        </h3>
+      {FEATURE_FLAGS.showNewsletter && (
+        <div class="col-span-2">
+          <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
+            {sectionThreeTitle}
+          </h3>
 
-        <form>
-          <EmailFooterInput />
-          <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-            {sectionThreeContent}
-          </p>
-        </form>
-      </div>
+          <form>
+            <EmailFooterInput />
+            <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
+              {sectionThreeContent}
+            </p>
+          </form>
+        </div>
+      )}
     </div>
 
     <div
