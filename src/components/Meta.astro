@@ -39,7 +39,9 @@ const socialImageRes = await getImage({
   width: 1200,
   height: 600,
 });
-const socialImage = Astro.url.origin + socialImageRes.src; // Get the full URL of the image (https://stackoverflow.com/a/9858694)
+// Add cache busting parameter to force refresh of social media previews
+const cacheVersion = Date.now();
+const socialImage = Astro.url.origin + socialImageRes.src + `?v=${cacheVersion}`;
 
 // Since we only support English now, we don't need alternate language links
 const alternateLanguageLinks: string = "";
@@ -90,6 +92,8 @@ const appleTouchIcon = await getImage({
 <meta content="1200" property="og:image:width" />
 <meta content="600" property="og:image:height" />
 <meta content="image/png" property="og:image:type" />
+<meta property="og:image:alt" content="Trade Guild Consulting - Business Challenges? We've Got You Covered." />
+<meta property="og:updated_time" content={new Date().toISOString()} />
 
 {/* Twitter Meta Tags */}
 <meta name="twitter:card" content="summary_large_image" />
