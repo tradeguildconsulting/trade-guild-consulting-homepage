@@ -45,4 +45,8 @@ export const CONTACT = {
   email: "connect@tradeguildconsulting.com",
 };
 
+export const ANALYTICS = {
+  measurementId: "G-EZSRET9KZT",
+};
+
 export const partnersData = []

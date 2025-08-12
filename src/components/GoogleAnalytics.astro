@@ -1,0 +1,43 @@
+---
+import { ANALYTICS } from "@data/constants";
+
+// Only load Google Analytics in production
+const isProduction = import.meta.env.PROD;
+const measurementId = ANALYTICS.measurementId;
+---
+
+{isProduction && measurementId && (
+  <>
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+    <script is:inline define:vars={{ measurementId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Configure GA4 with privacy-conscious settings
+      gtag('config', measurementId, {
+        // Privacy settings
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        
+        // Performance settings
+        send_page_view: true,
+        
+        // Custom settings for better privacy compliance
+        cookie_flags: 'SameSite=Strict;Secure',
+        cookie_expires: 63072000, // 2 years in seconds
+        
+        // Disable automatic file downloads, outbound clicks, and site search tracking
+        enhanced_measurement: {
+          scrolls: true,
+          outbound_clicks: false,
+          site_search: false,
+          video_engagement: false,
+          file_downloads: false
+        }
+      });
+    </script>
+  </>
+)}
