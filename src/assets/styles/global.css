@@ -5,6 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  /* Custom breakpoints */
+  --breakpoint-xs: 475px;
+  
   /* https://tailwindcss.com/docs/colors#customizing-your-colors */
   --color-*: initial;
   --color-transparent: transparent;
@@ -208,13 +211,50 @@
       max-width: 100vw;
       box-sizing: border-box;
     }
+
+    /* Mobile navbar specific fixes */
+    nav {
+      min-height: auto;
+    }
+    
+    /* Ensure mobile menu doesn't cause horizontal scroll */
+    .hs-collapse {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
   }
 
   /* Extra small screens */
-  @media (max-width: 375px) {
+  @media (max-width: 475px) {
     /* More aggressive text wrapping for very small screens */
     * {
       word-break: break-word;
+    }
+    
+    /* Ensure mobile header elements don't overlap */
+    .mobile-header-spacing {
+      gap: 0.25rem !important;
+    }
+    
+    /* Force smaller logo on very small screens */
+    .brand-logo-xs {
+      max-width: 120px !important;
+    }
+  }
+
+  /* Very small screens - phones in portrait */
+  @media (max-width: 375px) {
+    /* Ensure hamburger menu is always accessible */
+    .mobile-menu-button {
+      min-width: 44px;
+      min-height: 44px;
+      flex-shrink: 0;
+    }
+    
+    /* Prevent logo from taking too much space */
+    .mobile-brand-container {
+      max-width: calc(100vw - 120px);
+      overflow: hidden;
     }
   }
 }
