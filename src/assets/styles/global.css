@@ -257,4 +257,80 @@
       overflow: hidden;
     }
   }
+
+  /* Footer-specific fixes to prevent text bleeding */
+  footer {
+    overflow-x: hidden;
+  }
+
+  footer * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Ensure footer grid doesn't cause horizontal overflow */
+  footer .grid {
+    min-width: 0;
+  }
+
+  footer .grid > * {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* Footer text elements should not overflow */
+  footer h3,
+  footer p,
+  footer a,
+  footer span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Footer links should wrap properly */
+  footer ul li a {
+    display: block;
+    word-break: break-word;
+    line-height: 1.4;
+  }
+
+  /* Ensure footer brand logo container doesn't overflow */
+  footer .col-span-full {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* Mobile footer improvements */
+  @media (max-width: 768px) {
+    footer .grid {
+      gap: 1rem;
+    }
+    
+    footer .col-span-1 {
+      min-width: 0;
+    }
+    
+    /* Ensure footer sections don't bleed into each other */
+    footer .col-span-2 {
+      grid-column: span 2;
+      min-width: 0;
+      max-width: 100%;
+    }
+  }
+
+  /* Extra small screens footer fixes */
+  @media (max-width: 475px) {
+    footer .grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    footer .col-span-full,
+    footer .col-span-1,
+    footer .col-span-2 {
+      grid-column: span 1;
+    }
+  }
 }

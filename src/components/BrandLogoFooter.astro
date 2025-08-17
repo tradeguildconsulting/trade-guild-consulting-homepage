@@ -1,0 +1,20 @@
+---
+import logoImage from "../images/logo.png";
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={`flex flex-col items-center gap-2 ${className || ""}`}>
+  <img
+    src={logoImage.src}
+    alt="Trade Guild Consulting Logo"
+    class="h-20 w-auto object-contain drop-shadow-sm flex-shrink-0 sm:h-24 md:h-28 lg:h-32"
+  />
+  <span class="text-lg font-bold text-neutral-800 dark:text-neutral-200 text-center leading-tight">
+    Trade Guild Consulting
+  </span>
+</div>
